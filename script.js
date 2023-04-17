@@ -37,18 +37,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
 
 /* Mouse Cursor Effect*/
-const cursor = document.querySelector(".cursor");
-const text = document.querySelector(".text");
+const cursor = document.querySelector('.cursor');
 
-document.addEventListener("mousemove", e => {
-	cursor.style.left = e.pageX + "px";
-	cursor.style.top = e.pageY + "px";
-});
-
-document.addEventListener("scroll", e => {
-	if (window.scrollY > 100) {
-		text.style.opacity = 0;
-	} else {
-		text.style.opacity = 1;
-	}
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 });
