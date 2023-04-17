@@ -1,0 +1,150 @@
+
+
+
+
+/* ChatGPT was used in the assistance of creating this part*/
+
+header {
+	background: linear-gradient(270deg, #702D0E 8.75%, #904215 40.42%);
+	color: #ffffff;
+	padding: 20px;
+    text-align: center;
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    text-align: center;
+    font-family: 'Space Grotesk';font-size: 22px;
+    background: #f1ac3f;
+    
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #2b97df;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+.image-overlay {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #8B3A0A;
+    color: rgb(222, 166, 46);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Space Grotesk'
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #478cce;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+  /* This is the Slide In animation Code*/
+  .animate {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+/* This is the Typing Text animation Code*/
+.typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid #000;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+}
+
+.typing {
+    animation: typing 4s steps(30, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Enable Smooth Scroll to section */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  
