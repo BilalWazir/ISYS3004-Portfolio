@@ -181,3 +181,11 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.cursor--large,
+.cursor--small {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
