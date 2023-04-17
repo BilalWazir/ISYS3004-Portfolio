@@ -24,22 +24,18 @@ type_observer.observe(document.querySelector('.typing-text'));
 
 /* This is set in place to enable smooth scrolling to a section in the page when clicked in dropdown menu*/
 /* ChatGPT was used in the assistance of creating this part*/
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-  
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-  
-
-/* Mouse Cursor Effect*/
-const cursor = document.querySelector('.cursor');
-
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
+document.addEventListener("mousemove", function(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  document.getElementById("cursor").style.transform = "translate(" + x + "px, " + y + "px)";
 });
+
+var text = "Spinning Text";
+var textIndex = 0;
+setInterval(function() {
+  if (textIndex >= text.length) {
+    textIndex = 0;
+  }
+  document.getElementById("cursor").getElementsByClassName("text")[0].innerHTML = text.substring(textIndex, text.length) + text.substring(0, textIndex);
+  textIndex++;
+}, 100);
