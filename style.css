@@ -94,7 +94,7 @@ nav a {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #478cce;}
+  .dropdown-content a:hover {background-color: #04721b;}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
