@@ -32,15 +32,20 @@ document.addEventListener("mousemove", function(event) {
 
 /*Changes to Cursor*/
 
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', e => {
-  cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+const cursor = document.querySelector("#cursor");
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 15) + "px; left: " + (e.pageX - 15) + "px;"
+  );
 });
 
-document.addEventListener('click', () => {
-  cursor.classList.add("expand");
-
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500)
+const hoverable = document.querySelectorAll(".hoverable");
+hoverable.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    cursor.classList.add("hovered");
+  });
+  element.addEventListener("mouseout", () => {
+    cursor.classList.remove("hovered");
+  });
 });
